@@ -1,5 +1,5 @@
 
-export const DATABASE_NAME: string = "";
+export const DATABASE_NAME: string = "coffee-shop";
 export const DATABASE_HOST: string = "localhost";
 export const DATABASE_PORT: number = 5432;
 export const DATABASE_USERNAME: string = "";
