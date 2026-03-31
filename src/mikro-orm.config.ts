@@ -2,6 +2,7 @@ import { defineConfig, PostgreSqlDriver } from "@mikro-orm/postgresql";
 import { DATABASE_HOST, DATABASE_NAME, DATABASE_PASSWORD, DATABASE_PORT, DATABASE_SYNC, DATABASE_USERNAME } from "./config/constants";
 import { Migrator } from "@mikro-orm/migrations";
 import { TsMorphMetadataProvider } from "@mikro-orm/reflection";
+import { MikroOrmModuleSyncOptions } from "@mikro-orm/nestjs";
 
 export const MIKROORM_CONFIG = {
     extensions: [Migrator],
@@ -15,7 +16,7 @@ export const MIKROORM_CONFIG = {
     password: DATABASE_PASSWORD,
     logger: (log_message) => console.log(log_message),
     debug: true,
-    allowedGlobalContext: true,
+    allowGlobalContext: true,
     metadataProvider: TsMorphMetadataProvider,
     autoLoadEntities: false,
     synchronize: DATABASE_SYNC,
@@ -27,4 +28,4 @@ export const MIKROORM_CONFIG = {
     }
 }
 
-export default defineConfig(MIKROORM_CONFIG);
+// export const MIKROORM_CONFIG = defineConfig(CONFIG);
