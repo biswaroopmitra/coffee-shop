@@ -2,6 +2,6 @@ import { BaseEntity } from "@/base-entity";
 import { Entity } from "@mikro-orm/core";
 
 @Entity()
-export class Sandwich extends BaseEntity{
+export class Product extends BaseEntity{
     
 }
